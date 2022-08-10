@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    background: #eee;
+    width: 800px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 100px auto 1fr;
+    grid-template-rows: 100px 1fr auto;
+    gap: 10px;
+
+}
+
+.parent div {
+    background: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
