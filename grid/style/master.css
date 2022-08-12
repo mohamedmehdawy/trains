@@ -7,10 +7,11 @@
     width: 800px;
     height: 500px;
     display: grid;
-    grid-template-columns: 100px auto 1fr;
-    grid-template-rows: 100px 1fr auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
     gap: 10px;
-
+    justify-content: center;
+    align-content: center;
 }
 
 .parent div {
