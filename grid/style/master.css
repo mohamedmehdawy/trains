@@ -1,23 +1,47 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.parent {
-    background: #eee;
-    width: 800px;
-    height: 500px;
+.page {
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    gap: 10px;
-    justify-content: center;
-    align-content: center;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+        "logo logo logo nav nav nav nav nav nav nav"
+        "cont cont cont cont cont cont cont side side side"
+        "foot foot foot foot foot foot foot foot foot foot "
+    ;
+}
+.page h2 {
+    grid-area: logo;
+    background: red;
+}
+.page nav {
+    grid-area: nav;
+    background: blue;
+}
+.page nav ul {
+    list-style: none;
+    display: flex;
+}
+.page nav ul li{
+    margin-right: 5px;
 }
 
-.parent div {
-    background: red;
-    color: white;
-    padding: 20px;
-    font-size: 30px;
-    font-weight: bold;
+.page .content {
+    grid-area: cont;
+    background: yellow;
+}
+.page aside {
+    grid-area: side;
+    background: green;
+}
+
+.page footer {
+    grid-area: foot;
+    background: black;
+    color: #fff;
 }
