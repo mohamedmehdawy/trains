@@ -5,15 +5,19 @@
 }
 
 .parent {
-    width: 500px;
     height: 500px;
     margin: 20px auto;
     background-color: #c8c8c8;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     gap: 5px;
 }
+.parent.fill {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.parent.fit {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
+}
 .parent div {
     background: red;
     color: white;
@@ -21,10 +25,6 @@
     padding: 10px;
     
 }
-.parent div.bro {
-    grid-area: 2 / 2 / 4 / 6;
-    background: green
-}
-.parent div:last-of-type {
-    grid-column: span 6;
+.parent.fill div {
+    background: green;
 }
