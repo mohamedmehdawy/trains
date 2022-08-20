@@ -21,3 +21,10 @@
     padding: 10px;
     
 }
+.parent div.bro {
+    grid-area: 2 / 2 / 4 / 6;
+    background: green
+}
+.parent div:last-of-type {
+    grid-column: span 6;
+}
